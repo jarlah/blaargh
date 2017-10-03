@@ -22,6 +22,10 @@ object Views {
     override val basePath = s"${RuntimeConfig.PathPrefix}about"
   }
 
+  case object Contact extends View with ViewType {
+    override val basePath = s"${RuntimeConfig.PathPrefix}contact"
+  }
+
   case object NotFound extends View with ViewType {
     override val basePath = s"${RuntimeConfig.PathPrefix}notfound"
   }

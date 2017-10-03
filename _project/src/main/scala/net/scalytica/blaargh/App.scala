@@ -48,6 +48,7 @@ object App extends JSApp {
     (trimSlashes
       | staticRoute(Home.basePath, Home) ~> renderR(ctl => HomePage(ctl))
       | staticRoute(About.basePath, About) ~> render(AboutPage(SiteConfig))
+      | staticRoute(Contact.basePath, Contact) ~> render(ContactPage())
       | staticRoute(NotFound.basePath, NotFound) ~> render(NotFoundPage())
       | filterRule.prefixPath_/(Filter.basePath).pmap[View](Filter.apply) { case Filter(criteria) => criteria }
       | postsRule.prefixPath_/(Posts.basePath).pmap[View](Posts.apply) { case Posts(ref) => ref }
@@ -73,25 +74,16 @@ object App extends JSApp {
     case class State(conf: Config)
 
     class Backend($: BackendScope[Props, State]) {
-      val ga = Dynamic.global.ga
 
       def init: Callback = {
         $.props.map { p =>
           Callback.future[Unit] {
             p.futureConf.map { c =>
-              ga("create", c.owner.googleAnalytics, "auto")
-              ga("send", "pageview")
               $.modState(_.copy(conf = c))
             }
           }.runNow()
         }
       }
-
-      def feedAnalytics(props: Props): Callback =
-        Callback {
-          ga("set", "page", props.ctl.pathFor(props.r.page).value)
-          ga("send", "pageview")
-        }
 
       def render(props: Props, state: State) = {
         <.div(BlaarghBootstrapCSS.box)(
@@ -115,7 +107,6 @@ object App extends JSApp {
       .initialState_P(p => State(Config.empty))
       .renderBackend[Backend]
       .componentWillMount(_.backend.init)
-      .componentWillReceiveProps(ctx => ctx.$.backend.feedAnalytics(ctx.nextProps))
       .build
 
     def apply(conf: Future[Config], ctl: RouterCtl[View], r: Resolution[View]) =

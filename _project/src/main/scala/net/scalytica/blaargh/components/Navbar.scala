@@ -8,7 +8,7 @@ import japgolly.scalajs.react.extra._
 import japgolly.scalajs.react.extra.router.RouterCtl
 import japgolly.scalajs.react.vdom.prefix_<^._
 import net.scalytica.blaargh.models.Config
-import net.scalytica.blaargh.pages.Views.{About, Home, Posts, View}
+import net.scalytica.blaargh.pages.Views._
 import net.scalytica.blaargh.styles.BlaarghBootstrapCSS
 import org.scalajs.dom
 
@@ -105,7 +105,8 @@ object Navbar {
             ),
             <.ul(Styles.navbar,
               MenuItem(props, "BLOG", Home),
-              MenuItem(props, "ABOUT", About)
+              MenuItem(props, "ABOUT", About),
+              MenuItem(props, "CONTACT", Contact)
             )
           )
         )
