@@ -17,7 +17,7 @@ object Footer {
     .render { $ =>
       <.div(BlaarghBootstrapCSS.container,
         <.span(s"© ${new js.Date().getFullYear()} ${$.props.owner.name}, all rights reserved. Powered by "),
-        <.a(BlaarghBootstrapCSS.textMuted, ^.href := "https://github.com/kpmeen/blaargh", ^.target := "_blank", "Blaargh!")
+        <.a(BlaarghBootstrapCSS.textMuted, ^.href := "https://github.com/jarlah/blaargh", ^.target := "_blank", "Blaargh!")
       )
     }
     .build
