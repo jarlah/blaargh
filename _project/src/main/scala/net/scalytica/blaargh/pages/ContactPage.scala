@@ -79,7 +79,7 @@ object ContactPage {
       val isFormValid = isNameValid && isEmailValid && isMessageValid
       <.div(BlaarghBootstrapCSS.container,
         <.div(BlaarghBootstrapCSS.container,
-          <.h1("Contact me"),
+          <.h1("Contact Me"),
           <.form(
             ^.onSubmit ==> onSubmit(isFormValid),
             ^.className := "form-horizontal",

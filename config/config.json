@@ -1,5 +1,5 @@
 {
-  "url": "http://hübenthal.no",
+  "url": "http://xn--hbenthal-65a.no",
   "siteTitle": "Jarl André Hübenthal",
   "authors": [
     {
@@ -19,11 +19,11 @@
     "linkedin": "jarlandreh"
   },
   "mailto": {
-    "from": "noreply@hübenthal.no",
+    "from": "noreply@xn--hbenthal-65a.no",
     "to": "jarl.andre@gmail.com",
     "subject": "Tilbakemelding fra hjemmesiden",
     "url": "https://www.domeneshop.no/cgi-bin/mailto.cgi",
     "acceptCharset": "ISO-8859-1",
-    "resultUrl": "http://hübenthal/#thanks"
+    "resultUrl": "http://xn--hbenthal-65a.no/#thanks"
   }
 }
