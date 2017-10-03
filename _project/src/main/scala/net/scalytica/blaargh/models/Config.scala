@@ -40,10 +40,31 @@ object Owner {
   )
 }
 
+case class Mailto(
+  from: String,
+  to: String,
+  subject: String,
+  url: String,
+  acceptCharset: String,
+  resultUrl: String
+)
+
+object Mailto {
+  val empty = Mailto(
+    from = "",
+    to = "",
+    subject = "",
+    url = "",
+    acceptCharset = "",
+    resultUrl = ""
+  )
+}
+
 case class Config(
   siteTitle: String,
   authors: Seq[Author],
-  owner: Owner
+  owner: Owner,
+  mailto: Mailto
 )
 
 object Config {
@@ -51,7 +72,8 @@ object Config {
   val empty = Config(
     siteTitle = "",
     authors = Seq.empty,
-    owner = Owner.empty
+    owner = Owner.empty,
+    mailto = Mailto.empty
   )
 
   def load(): Future[Config] =

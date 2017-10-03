@@ -17,5 +17,13 @@
     "googleAnalytics": "",
     "github": "jarlah",
     "linkedin": "jarlandreh"
+  },
+  "mailto": {
+    "from": "noreply@hübenthal.no",
+    "to": "jarl.andre@gmail.com",
+    "subject": "Tilbakemelding fra hjemmesiden",
+    "url": "https://www.domeneshop.no/cgi-bin/mailto.cgi",
+    "acceptCharset": "ISO-8859-1",
+    "resultUrl": "http://hübenthal/#thanks"
   }
 }

@@ -18,6 +18,10 @@ object Views {
     override val basePath = ""
   }
 
+  case object Thanks extends View with ViewType {
+    override val basePath = s"${RuntimeConfig.PathPrefix}thanks"
+  }
+
   case object About extends View with ViewType {
     override val basePath = s"${RuntimeConfig.PathPrefix}about"
   }

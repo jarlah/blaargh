@@ -48,7 +48,8 @@ object App extends JSApp {
     (trimSlashes
       | staticRoute(Home.basePath, Home) ~> renderR(ctl => HomePage(ctl))
       | staticRoute(About.basePath, About) ~> render(AboutPage(SiteConfig))
-      | staticRoute(Contact.basePath, Contact) ~> render(ContactPage())
+      | staticRoute(Contact.basePath, Contact) ~> render(ContactPage(SiteConfig))
+      | staticRoute(Thanks.basePath, Thanks) ~> render(ThanksPage())
       | staticRoute(NotFound.basePath, NotFound) ~> render(NotFoundPage())
       | filterRule.prefixPath_/(Filter.basePath).pmap[View](Filter.apply) { case Filter(criteria) => criteria }
       | postsRule.prefixPath_/(Posts.basePath).pmap[View](Posts.apply) { case Posts(ref) => ref }
