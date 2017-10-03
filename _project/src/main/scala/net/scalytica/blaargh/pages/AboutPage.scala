@@ -112,9 +112,17 @@ object AboutPage {
                   StringUtils.asOption(state.conf.owner.github).map(github =>
                     <.a(
                       Styles.authorSocial,
-                      ^.href := s"http://github.com/${state.conf.owner.github}",
+                      ^.href := s"http://github.com/$github",
                       ^.target := "_blank",
                       <.i(^.className := "fa fa-github")
+                    )
+                  ).getOrElse(EmptyTag),
+                  StringUtils.asOption(state.conf.owner.linkedin).map(linkedin =>
+                    <.a(
+                      Styles.authorSocial,
+                      ^.href := s"https://www.linkedin.com/in/$linkedin",
+                      ^.target := "_blank",
+                      <.i(^.className := "fa fa-linkedin")
                     )
                   ).getOrElse(EmptyTag)
                 )

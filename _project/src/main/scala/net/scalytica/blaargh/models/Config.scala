@@ -22,7 +22,8 @@ case class Owner(
   disqusShortname: String,
   twitter: String,
   googleAnalytics: String,
-  github: String
+  github: String,
+  linkedin: String
 )
 
 object Owner {
@@ -34,7 +35,8 @@ object Owner {
     disqusShortname = "",
     twitter = "",
     googleAnalytics = "",
-    github = ""
+    github = "",
+    linkedin = ""
   )
 }
 

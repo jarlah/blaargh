@@ -1,6 +1,6 @@
 {
   "url": "http://hübenthal.no",
-  "siteTitle": "Jarls homepage",
+  "siteTitle": "Jarl André Hübenthal",
   "authors": [
     {
       "name": "Jarl André Hübenthal",
@@ -9,12 +9,13 @@
   ],
   "owner": {
     "name": "Jarl André Hübenthal",
-    "avatar": "",
-    "bio": "I am a senior java developer, but I also do javascript. I would be called by mostly everyone as a 'full stack developer'.",
+    "avatar": "http://www.gravatar.com/avatar/506c6468d0702d91b6d52ca79c2c4418",
+    "bio": "I am a senior java developer, but I also do javascript. I would be called by mostly everyone a 'full stack developer'.",
     "email": "jarl.andre@gmail.com",
     "disqusShortname": "",
     "twitter": "jarlandreh",
     "googleAnalytics": "",
-    "github": "jarlah"
+    "github": "jarlah",
+    "linkedin": "jarlandreh"
   }
 }

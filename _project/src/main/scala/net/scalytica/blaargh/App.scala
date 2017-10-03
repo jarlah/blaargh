@@ -97,11 +97,7 @@ object App extends JSApp {
         <.div(BlaarghBootstrapCSS.box)(
           Navbar(state.conf, props.r.page, props.ctl),
           <.header(BlaarghBootstrapCSS.blaarghHeader,
-            <.div(BlaarghBootstrapCSS.blaarghHeaderSVGContainer,
-              <.div(BlaarghBootstrapCSS.blaarghSVGHeaderText,
-                HeaderSVG(state.conf)
-              )
-            )
+            HeaderSVG(state.conf)
           ),
           <.section(BlaarghBootstrapCSS.blaarghContent,
             <.div(BlaarghBootstrapCSS.container,
