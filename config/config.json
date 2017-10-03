@@ -1,24 +1,20 @@
 {
-  "url": "http://localhost",
-  "siteTitle": "Blaargh!",
+  "url": "http://hübenthal.no",
+  "siteTitle": "Jarls homepage",
   "authors": [
     {
-      "name": "John Doe",
-      "email": "john@mailinator.com"
-    },
-    {
-      "name": "Jane Doe",
-      "email": "jane@mailinator.com"
+      "name": "Jarl André Hübenthal",
+      "email": "jarl.andre@gmail.com"
     }
   ],
   "owner": {
-    "name": "John Doe",
+    "name": "Jarl André Hübenthal",
     "avatar": "",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-    "email": "",
+    "bio": "I am a senior java developer, but I also do javascript. I would be called by mostly everyone as a 'full stack developer'.",
+    "email": "jarl.andre@gmail.com",
     "disqusShortname": "",
-    "twitter": "scala_js",
+    "twitter": "jarlandreh",
     "googleAnalytics": "",
-    "github": ""
+    "github": "jarlah"
   }
 }
