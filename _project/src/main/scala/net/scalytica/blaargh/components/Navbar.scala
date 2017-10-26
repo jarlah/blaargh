@@ -79,7 +79,11 @@ object Navbar {
       val isActive = props.currPage == menuItem || (menuItem == Home && props.currPage.isInstanceOf[Posts])
 
       <.li(Styles.blaarghNavItem(isActive),
-        <.a(Styles.blaarghNavbarLink, ^.href := "_", ^.onClick ==> { (e: ReactEventI) => e.preventDefaultCB >> props.ctl.set(menuItem) },
+        <.a(Styles.blaarghNavbarLink,
+          "data-toggle".reactAttr := "collapse",
+          "data-target".reactAttr := "#collapseNav",
+          ^.href := "_",
+          ^.onClick ==> { (e: ReactEventI) => e.preventDefaultCB >> props.ctl.set(menuItem) },
           <.span(menuName),
           if (isActive) <.span(Styles.navActiveHamburger, "(current)") else EmptyTag
         )
